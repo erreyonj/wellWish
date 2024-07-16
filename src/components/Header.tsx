@@ -75,13 +75,13 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <section className="flex items-center justify-between mt-8 md:mt-16 mb-12 lg:fixed lg:top-0 lg:z-10">
-      <Link href="/">
+    <section className="flex items-center justify-between mb-12 lg:fixed lg:top-0 lg:z-10 h-40">
+      <Link href="/" className="">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
           {config.blog.name}
         </h1>
       </Link>
-      <Navigation />
+      <Navigation/>
     </section>
   );
 };

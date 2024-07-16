@@ -48,15 +48,17 @@ export const BlogPostsPreview: FunctionComponent<{
   className?: string;
 }> = ({ posts, className }) => {
   return (
-    <div
-      className={cn(
-        "flex flex-col gap-16 lg:gap-28 md:grid-cols-2 md:mt-40 my-8 md:ml-60 z-10",
-        className
-      )}
-    >
-      {posts.map((post) => (
-        <BlogPostPreview key={post.id} post={post} />
-      ))}
+    <div className="scrollContainer w-[70dvw] overflow-scroll md:mt-40">
+      <div
+        className={cn(
+          "flex flex-col gap-16 lg:gap-28 md:grid-cols-2 my-8 md:ml-60 z-10",
+          className
+        )}
+      >
+        {posts.map((post) => (
+          <BlogPostPreview key={post.id} post={post} />
+        ))}
+      </div>
     </div>
   );
 };
