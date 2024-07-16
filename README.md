@@ -41,6 +41,9 @@ Wisp is a modern CMS for adding blogs to websites. It features an intuitive, med
 - [TypeScript](https://www.typescriptlang.org/) for type safety
 - Font optimization with [next/font](https://nextjs.org/docs/app/api-reference/components/font)
 
+  In Development
+- [Stytch](https://github.com/stytchauth/stytch-node) Auth and User setup
+
 ## Step-by-step Video Tutorial
 
 We've now included a 3-part video tutorial to help you run this blog on your computer:
