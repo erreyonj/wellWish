@@ -10,17 +10,17 @@ const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    absolute: config.blog.metadata.title.absolute,
-    default: config.blog.metadata.title.default,
-    template: config.blog.metadata.title.template,
+    absolute: config.app.metadata.title.absolute,
+    default: config.app.metadata.title.default,
+    template: config.app.metadata.title.template,
   },
-  description: config.blog.metadata.description,
+  description: config.app.metadata.description,
   openGraph: {
-    title: config.blog.metadata.title.default,
-    description: config.blog.metadata.description,
+    title: config.app.metadata.title.default,
+    description: config.app.metadata.description,
     images: [
       signOgImageUrl({
-        title: config.blog.name,
+        title: config.app.name,
       }),
     ]
   }

@@ -7,9 +7,9 @@ const SideBar = () => {
         <h2 className=''>Wells</h2>
         <input type="search" name="" id="" className='h-8 w-72 ml-3' />
     
-        <div className="text-sm text-muted-foreground mr-auto ml-auto">
+        {/* <div className="text-sm text-muted-foreground mr-auto ml-auto">
             © {config.blog.copyright} {new Date().getFullYear()}
-        </div>
+        </div> */}
     </div>
   )
 }
