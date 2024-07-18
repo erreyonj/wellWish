@@ -20,7 +20,7 @@ const Page = async ({
       <div className="container mx-auto px-5 mb-10">
         <Header />
  
-        {/* <Login /> */}
+        <Login />
         {/* <SideBar /> */}
         {/* <BlogPostsPreview posts={result.posts} /> */}
         {/* <BlogPostsPagination pagination={result.pagination} /> */}
