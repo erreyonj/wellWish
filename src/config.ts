@@ -6,6 +6,8 @@ const buildConfig = () => {
   const defaultTitle =
     process.env.NEXT_DEFAULT_METADATA_DEFAULT_TITLE || "Travel with Samantha";
   const defaultDescription = process.env.NEXT_PUBLIC_APP_DESCRIPTION || "Blog about travel and lifestyle.";
+  const stytchProjID = process.env.STYTCH_PROJECT_ID;
+  const stytchToken = process.env.STYTCH_PUBLIC_TOKEN || "Stytch Public Token is missing";
 
   return {
     baseUrl: process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
@@ -26,6 +28,10 @@ const buildConfig = () => {
       "secret_used_for_signing_and_verifying_the_og_image_url",
     wisp: {
       appId,
+    },
+    stytch:{
+      stytchProjID,
+      stytchToken,
     },
   };
 };

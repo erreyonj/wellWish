@@ -1,10 +1,12 @@
+'use client'
 import { StytchLogin } from "@stytch/nextjs";
-import { Products } from "@stytch/vanilla-js";
+import { Products, StytchLoginConfig } from "@stytch/vanilla-js";
+
 
 const Login = () => {
   const REDIRECT_URL = "http://localhost:3000/authenticate";
   // Configure the pre-built UI and authentication methods
-  const config = {
+  const config: StytchLoginConfig = {
     products: [Products.emailMagicLinks, Products.oauth],
     emailMagicLinksOptions: {
       loginRedirectURL: REDIRECT_URL,
@@ -29,3 +31,4 @@ const Login = () => {
 
 }
 export default Login
+
