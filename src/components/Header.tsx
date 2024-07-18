@@ -12,6 +12,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
+
 interface MenuItem {
   name: string;
   href: string;
@@ -20,7 +21,7 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
-  { name: "Login", href: "/login" },
+  { name: "Login", href: "/" },
 ];
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();

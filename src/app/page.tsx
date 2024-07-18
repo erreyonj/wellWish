@@ -1,10 +1,6 @@
-import { BlogPostsPreview } from "@/components/BlogPostPreview";
-import { BlogPostsPagination } from "@/components/BlogPostsPagination";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import SideBar from "@/components/SideBar";
 import { wisp } from "@/lib/wisp";
-import { config } from "@/config";
 import Login  from "@/components/Login"
 
 
@@ -19,11 +15,9 @@ const Page = async ({
   return (
       <div className="container mx-auto px-5 mb-10">
         <Header />
- 
-        <Login />
-        {/* <SideBar /> */}
-        {/* <BlogPostsPreview posts={result.posts} /> */}
-        {/* <BlogPostsPagination pagination={result.pagination} /> */}
+        <div id="loginContainer" className="md:pt-48 w-[90%] mx-auto flex flex-wrap place-content-center">
+          <Login />
+        </div>
         <Footer />
       </div>
   );
