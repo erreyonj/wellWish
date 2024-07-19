@@ -1,6 +1,11 @@
 import React from 'react'
 
-const Well = () => {
+interface WellData {
+    wellName: string,
+    wellTags: [string],
+}
+
+const Well = ({}) => {
   return (
     <div>
       

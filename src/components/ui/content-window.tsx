@@ -1,11 +1,23 @@
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import React from 'react'
 import { ReactNode } from 'react'
 
 const ContentWindow = ({ children }: any) => {
   return (
     <div className='p-1 h-[85dvh] md:ml-20 overflow-scroll'>
-      <h1 className='mx-auto h-[15%] border border-stone-500 flex flex-col place-content-center'>Title of Content Goes Here</h1>
       { children }
+
+
+        {/* Below arrow system will likely be replaced by pagination component */}
+
+      <div id="windowArrows" className='flex place-content-between mt-5'>
+        <div className="windowArrow left">
+            <ArrowLeft />
+        </div>
+        <div className="windowArrow right">
+            <ArrowRight />
+        </div>
+      </div>
     </div>
   )
 }

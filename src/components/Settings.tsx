@@ -1,5 +1,6 @@
 import { User2 } from 'lucide-react'
 import React from 'react'
+import { DarkModeToggle } from './DarkModeToggle'
 
 const Settings = () => {
   return (
@@ -8,6 +9,9 @@ const Settings = () => {
             <User2 size="30" />
         </div>
         <h3 className='flex items-end pb-3 h-12 mx-1 mt-2 text-sm'>Username</h3>
+        <div id="darkMode" className='flex flex-col place-content-center ml-[13.7rem]'>
+            <DarkModeToggle />
+        </div>
     </div>
   )
 }
