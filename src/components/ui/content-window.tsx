@@ -10,7 +10,7 @@ const ContentWindow = ({ children }: any) => {
 
         {/* Below arrow system will likely be replaced by pagination component */}
 
-      <div id="windowArrows" className='flex place-content-between mt-5'>
+      <div id="windowArrows" className='flex place-content-between my-5'>
         <div className="windowArrow left">
             <ArrowLeft />
         </div>
