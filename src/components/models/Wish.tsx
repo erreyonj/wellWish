@@ -1,33 +1,34 @@
 import React from 'react'
-import mongoose from 'mongoose'
+import mongoose, {Document, Schema} from 'mongoose'
 
-const SingleWishSchema = new mongoose.Schema({
+export interface WishItem extends Document {
+  title: String,
+  subtitle: String,
+  caption: String,
+  well: String
+}
+
+const WishSchema: Schema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
   },
   subtitle: {
     type: String,
-    required: false,
-  },
-  img: {
-    type: Image,
-    required: false,
   },
   caption: {
     type: String,
     required: true,
   },
-})
+  well: {
+    type: String,
+  }
+});
+
+const Wish  = mongoose.models.Wish || mongoose.model<WishItem>("Wish", WishSchema)
 
 
-export default mongoose.model("Wish", SingleWishSchema)
-// const Wish = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
+export default Wish;
 
-// export default Wish
+
+
