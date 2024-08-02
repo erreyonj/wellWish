@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { WishItem } from './models/Wish';
+// import { makeWish } from './models/Wish';
 
-const WishList = () => {
+const WishList = async () => {
 
     const collectWishes = async () => {
         const res = await fetch("http://localhost:3000/api/wishes");
@@ -10,12 +10,14 @@ const WishList = () => {
         return wishes    
     }
 
-    const [wishes, setWishes] = useState([])
-    useEffect(()=>{
-        collectWishes().then((wishes)=>{
-            setWishes(wishes)
-        })
-    }, [])
+    const wishes = await collectWishes();
+
+    // const [wishes, setWishes] = useState([])
+    // useEffect(()=>{
+    //     collectWishes().then((wishes)=>{
+    //         setWishes(wishes)
+    //     });
+    // }, []);
 
     return (
         <div>

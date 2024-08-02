@@ -8,7 +8,9 @@ export async function GET(){
 
 
   try {
-    const wishes = await Wish.find({});  
+    const wishes = await Wish.find({});
+    console.log(wishes);
+      
     return NextResponse.json(wishes);
   } catch (err: any) {
     return NextResponse.json({error: err.message})
